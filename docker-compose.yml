@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  awscli:
+    image: leonyork/awscli:${IMAGE_TAG}
+    build:
+      context: .
+      args:
+        - "ALPINE_VERSION=${ALPINE_VERSION}"
+        - "AWSCLI_VERSION=${AWSCLI_VERSION}"
